@@ -115,7 +115,7 @@ def render_calendar_view(type_filter):
 
         cols = st.columns([6] + [10] * 7)
         with cols[0]:
-            st.markdown("<div style='text-align: left; padding: 0px; margin-top: 35px; margin-bottom: 2px; '>", unsafe_allow_html=True)
+            st.markdown("<div style='text-align: left; padding: 0px; margin-top: 90px; margin-bottom: 2px; '>", unsafe_allow_html=True)
             #st.subheader(f"**Week {week}**")
             
             st.subheader("**New**")
