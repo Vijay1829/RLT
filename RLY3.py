@@ -35,8 +35,8 @@ def transform_data(df, type_filter, current_week, max_weeks=12):
 
 # File path (adjust to your actual file path)
 country = "USA"  # This can be parameterized based on user selection if needed
-forecast_file_path = f"./{country}_forecasts.xlsx"
-model_file_path = f"./{country}_model.xlsx"
+forecast_file_path = f"./{country}_forecasts.csv"
+model_file_path = f"./{country}_model.csv"
 
 print(f"hi {forecast_file_path}, dagavaz {model_file_path}")
 
