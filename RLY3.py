@@ -11,7 +11,7 @@ def load_data(file_path):
     print(f"file_path")
     df = pd.read_csv(file_path,sep="\t")
 
-    df['Key'] = df['Country'] + '_' + df['Type'] + '_' + df['Order Category'] + '_' + df['Product']
+    df['Key'] = df['Country'] + '_' + df['Type'] + '_' + df['Order_Category'] + '_' + df['Product']
     
     return df
     
