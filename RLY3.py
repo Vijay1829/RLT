@@ -8,8 +8,7 @@ st.set_page_config(page_title="RLT", page_icon=None, layout="wide", initial_side
 @st.cache_data
 
 def load_data(file_path):
-    print(f"parsing the file : {file_path}")
-    df = pd.read_csv(file_path,sep="\t", encoding='latin-1')
+    df = pd.read_csv(file_path)
 
     df['Key'] = df['Country'] + '_' + df['Type'] + '_' + df['Order_Category'] + '_' + df['Product']
     
@@ -19,7 +18,7 @@ def load_data(file_path):
 def save_data(df, file_path):
     if 'Key' in df.columns:
         df.drop(columns=['Key'], inplace=True)
-    df.to_excel(file_path, index=False)
+    df.to_csv(file_path, index=False)
     
     
 def transform_data(df, type_filter, current_week, max_weeks=12):
@@ -37,8 +36,6 @@ def transform_data(df, type_filter, current_week, max_weeks=12):
 country = "USA"  # This can be parameterized based on user selection if needed
 forecast_file_path = f"./{country}_forecasts.csv"
 model_file_path = f"./{country}_model.csv"
-
-print(f"hi {forecast_file_path}, dagavaz {model_file_path}")
 
 # Load the data
 df_forecast = load_data(forecast_file_path)
