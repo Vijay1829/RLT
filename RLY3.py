@@ -8,7 +8,7 @@ st.set_page_config(page_title="RLT", page_icon=None, layout="wide", initial_side
 @st.cache_data
 
 def load_data(file_path):
-    df = pd.read_excel(file_path)
+    df = pd.read_excel(file_path, engine='openpyxl')
 
     df['Key'] = df['Country'] + '_' + df['Type'] + '_' + df['Order Category'] + '_' + df['Product']
     
