@@ -37,6 +37,8 @@ country = "USA"  # This can be parameterized based on user selection if needed
 forecast_file_path = f"./{country}_forecasts.xlsx"
 model_file_path = f"./{country}_model.xlsx"
 
+print(f"hi {forecast_file_path}, dagavaz {model_file_path}")
+
 # Load the data
 df_forecast = load_data(forecast_file_path)
 df_model = load_data(model_file_path)
