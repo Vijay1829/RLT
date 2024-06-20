@@ -9,7 +9,7 @@ st.set_page_config(page_title="RLT", page_icon=None, layout="wide", initial_side
 
 def load_data(file_path):
     print(f"file_path")
-    df = pd.read_csv(file_path,sep="\t")
+    df = pd.read_csv(file_path,sep="\t", encoding='latin-1')
 
     df['Key'] = df['Country'] + '_' + df['Type'] + '_' + df['Order_Category'] + '_' + df['Product']
     
