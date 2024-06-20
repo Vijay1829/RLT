@@ -115,12 +115,12 @@ def render_calendar_view(type_filter):
 
         cols = st.columns([6] + [10] * 7)
         with cols[0]:
-            st.markdown("<div style='text-align: left; padding: 0px; margin-top: 90px; margin-bottom: 2px; '>", unsafe_allow_html=True)
+            st.markdown("<div style='text-align: left; padding: 0px; margin-top: 90px; margin-bottom: 2px; margin-right: 0px; '>", unsafe_allow_html=True)
             #st.subheader(f"**Week {week}**")
             
-            st.write("**New**")
+            st.subheader("**New**")
 
-            st.write("**Total**")
+            st.subheader("**Total**")
 
             st.markdown("</div>", unsafe_allow_html=True)
 
