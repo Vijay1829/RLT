@@ -118,9 +118,9 @@ def render_calendar_view(type_filter):
             st.markdown("<div style='text-align: left; padding: 0px; margin-top: 90px; margin-bottom: 2px; '>", unsafe_allow_html=True)
             #st.subheader(f"**Week {week}**")
             
-            st.subheader("**New**")
+            st.write("**New**")
 
-            st.subheader("**Total**")
+            st.write("**Total**")
 
             st.markdown("</div>", unsafe_allow_html=True)
 
