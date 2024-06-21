@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="RLT", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
 
-#@st.cache_data
+@st.cache_data
 
 def load_data(file_path):
     df = pd.read_csv(file_path, sep='\t')
@@ -42,7 +42,7 @@ df_forecast = load_data(forecast_file_path)
 df_model = load_data(model_file_path)
 
 
-title = f"RLT Country Tool  {country} : Commercial "
+title = f"{country} : Commercial "
 
 
 
