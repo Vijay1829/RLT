@@ -42,10 +42,7 @@ df_forecast = load_data(forecast_file_path)
 df_model = load_data(model_file_path)
 
 
-title = f"""
-RLT Country Tool
-## {country} : Commercial
-"""
+title = f"RLT Country Tool  {country} : Commercial "
 
 
 
