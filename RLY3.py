@@ -18,7 +18,7 @@ def load_data(file_path):
 def save_data(df, file_path):
     if 'Key' in df.columns:
         df.drop(columns=['Key'], inplace=True)
-    df.to_csv(file_path, index=False)
+    df.to_csv(file_path, sep='\t', index=False)
     
     
 def transform_data(df, type_filter, current_week, max_weeks=12):
